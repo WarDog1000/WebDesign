@@ -6,11 +6,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html,
-body {
+html,body {
     display: grid;
     height: 100%;
     place-items: center;
+    text-align: center;
     background: #9bce2e;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .container:hover .image img {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .container .content {
