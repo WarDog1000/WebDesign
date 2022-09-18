@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height:100vh;
+    background: #414247;
+}
+.card{
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid #656871;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* header styling */
+.card .header{
+    display: flex;
+    align-items: center;
+}
+.card .header .img{
+    height: 70px;
+    width: 70px;
+    background: #656871;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.card .header .details{
+    margin-left: 20px;
+}
+.card .header .details span{
+    background: #656871;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.card .header .details .name{
+    width: 100px;
+    height:15px;
+}
+.card .header .details .about{
+    width: 150px;
+    height:13px;
+    margin-top: 10px;
+}
+
+/* content styling */
+.card .content{
+    margin: 25px 0;
+
+}
+.card .content .line{
+    background: #656871;
+    height: 13px;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.card .content .line.line-1{
+    width: calc(100% - 15%);
+}
+.card .content .line.line-3{
+    width: calc(100% - 40%);
+}
+
+/* btns stylimg */
+.card .btns{
+    display: flex;
+}
+.card .btns .btn{
+    height: 45px;
+    width:100%;
+    background: #656871;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.card .btns .btn.btn-1{
+    margin-right: 8px;    
+}
+.card .btns .btn.batn-2{
+    margin-left: 8px;
+}
+
+/* ::before animation */
+.card .header .img::before,
+.card .header .details span::before,
+.card .content .line::before,
+.card .btns .btn::before{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-image: linear-gradient(to right, #656871 0%, #888b94 20%, #656871 40%, #656871 100%);
+    background-size: 450px 400px;
+    background-repeat: no-repeat;
+    animation: shimmer 1s linear infinite;
+}
+.card .header .details span::before,
+.card .btns .btn.batn-2::before{
+    animation-delay: 0.2s;
+}
+
+/* keyframes */
+@keyframes shimmer{
+    0%{
+        background-position: -450px 0;
+    }
+    100%{
+        background-position: 450px 0;
+    }
+}
