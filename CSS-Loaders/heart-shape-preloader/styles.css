@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* center start*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* center end*/
+
+    transform: translate(-50%, -50%);
+}
+
+/* rotate effect start */
+.preloader {
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        /* re rotate effect */
+        transform: rotate(720deg);
+    }
+}
+
+/* rotate effect end */
+.preloader span {
+    /* make a circle start */
+    height: 64px;
+    width: 64px;
+    display: block;
+    position: absolute;
+    background: #3fc1f2;
+    border: #3fc1f2;
+    border-radius: 100%;
+    /* make a ciercle end */
+}
+
+/* make a heart start */
+.preloader span:nth-child(1) {
+    transform: translate(-28px, -28px);
+    /* animation start */
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+.preloader span:nth-child(2) {
+    transform: translate(28px, -28px);
+    /* animation start */
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+.preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    /* background: red;
+    border-color: black; */
+    transform: scale(0.98) rotate(-45deg);
+    /* animation start */
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+/* make a heart end */
+
+@keyframes shape_1 {
+    60% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes shape_2 {
+    40% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes shape_3 {
+    50% {
+        border-radius: 100%;
+        transform: scale(0.5) rotate(-45deg);
+    }
+
+    100% {
+        transform: scale(0.98) rotate(-45deg);
+    }
+}
+
+.container .shadow {
+    position: relative;
+    display: block;
+    height: 16px;
+    width: 64px;
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+
+    top: 30px;
+
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+@keyframes shadow {
+    50% {
+        background: #f2f2f2;
+        transform: scale(0.6);
+    }
+}
