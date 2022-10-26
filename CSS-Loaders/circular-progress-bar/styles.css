@@ -100,11 +100,11 @@ html,body{
 
   .circle .dot span {
     position: absolute;
-    right: 0px;
+    right: 0;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background: red;
+    background: #4158d0;
   }
   @keyframes dot{
     0% {
