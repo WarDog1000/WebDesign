@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.text {
+    font-size: 50px;
+    font-weight: 500;
+    color: silver;
+    cursor: pointer;
+}
+
+.text span {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 500;
+    transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.text:hover span{
+    color: #27ae60;
+    transform: translateY(-30px);
+}
+
+/* span { // this style is asign to span in the script.js
+    transition-delay: 25ms;
+} */
