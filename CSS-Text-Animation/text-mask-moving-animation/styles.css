@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+    font-size: 120px;
+    background: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif) repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -4px;
+    text-shadow: 3px 3px 4px rgba(0,0,0,.2);
+}
