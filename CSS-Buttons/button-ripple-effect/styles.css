@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: navajowhite;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.container {
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.23);
+}
+
+.container .text {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.container p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.container .btns {
+  display: flex;
+  margin: 30px 0 20px 0;
+}
+
+.container .btns a {
+  height: 60px;
+  width: 200px;
+  display: block;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  line-height: 60px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.23);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.container .btns a:first-child {
+  background: linear-gradient(-90deg, #f5ce62, #e85a19);
+}
+
+.container .btns a:last-child {
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+/* After script */
+.container .btns a > span {
+  position: absolute;
+  /* background: rgba(255, 255, 255, 0.5); */
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripples 0.6s linear infinite;
+}
+
+@keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    height: 500px;
+    width: 500px;
+    opacity: 0;
+  }
+}
